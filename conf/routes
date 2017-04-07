@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET		/                           controllers.SparkPlayController.index
+GET		/index.html                 controllers.SparkPlayController.index
+POST	/open						controllers.SparkPlayController.openGraphEditor
+POST	/save						controllers.SparkPlayController.saveGraphEditor
+GET		/list						controllers.SparkPlayController.list
+# Map static resources from the /public folder to the /assets URL path
+GET     /sparkplay/*file            controllers.Assets.versioned(path="/public", file: Asset)
